@@ -1,0 +1,4 @@
+1. dump
+2. docker exec
+3. docker cp
+4. scp

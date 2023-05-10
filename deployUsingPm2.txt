@@ -1,0 +1,16 @@
+deploy a project using pm2
+1. Vào thư mục .ssh/, tạo ssh key mới bằng lệnh: ssh-keygen -f admin-kun (-f + tên file muốn tạo). Sau đó nó sẽ sinh ra 2 file lần lượt là admin-kun và admin-kun.pub
+2. trong file /.ssh/config
+
+Host github.com
+  Hostname github.com
+  IdentityFile ~/.ssh/july
+
+3. copy ssh key ở file pub vừa tạo, vào setting của repo, add deploy key đó vào
+https://docs.github.com/en/developers/overview/managing-deploy-keys
+
+4. cd /etc/nginx/sites-avalables
+5. touch admin-frontend
+6. ln -s /etc/nginx/sites-available/july /etc/nginx/sites-enabled/july
+7. git clone + yarn + yarn build
+8. pm2 start 'yarn start -p 3000' --name 'tong-dai-lofkun'
