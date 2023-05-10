@@ -27,10 +27,10 @@
     2. configure .bashrc
     3. restart bash
 ## Docs:
-    *ble.sh*:https://github.com/akinomyoga/ble.sh
+    https://github.com/akinomyoga/ble.sh
 
 
-### **ec2.sh**
+# **ec2.sh**
 ## Description:
     - conf environment for a web server
     - using for linux
